@@ -1,0 +1,11 @@
+services:
+  node:
+    build:
+      context: .
+    command: pnpm run dev
+    ports:
+      - 3000:3000
+    user: node
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
